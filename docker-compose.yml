@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  spring-boot-app:
+    image: 'test:0.0.1'
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=jdbc:postgresql://db:5432/stock
+  db:
+    image: postgres
+#    volumes:
+#      - ./data/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=stock
+
