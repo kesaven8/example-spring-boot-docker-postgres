@@ -6,3 +6,9 @@ mvnw.cmd
 mvnw
 HELP.md
 Test.iml
+.idea/workspace.xml
+target/classes/application.properties
+*.class
+*.lst
+target/surefire-reports/com.example.Test.TestApplicationTests.txt
+target/surefire-reports/TEST-com.example.Test.TestApplicationTests.xml
